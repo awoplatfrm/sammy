@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="sam" placeholder="enter your email">
+    <input type="text" id="usr" placeholder="enter your username">
+    <input type="password" name="" id="pass" placeholder="enter your password">
+    <button type="button" onclick="get()"> send</button>
+    <p id="memo"></p>
+
+    <script>
+        let arry = []
+        function sendt(){
+            let name = document.getElementById("sam").value
+            let usrn = document.getElementById("usr").value
+            let pwd = document.getElementById("pass").value
+            let obj = {
+                email : name, username: usrn, password : pwd
+            };
+           arry.push(obj)
+
+            localStorage.setItem("user",JSON.stringify(arry))
+        }
+        function get(){
+           for ( i=0, i<loc)
+           document.getElementById('memo').innerHTML = converts;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+}
+.form-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(107, 37, 193), rgb(57, 163, 57));
+    margin: 5%;
+    padding: 5%;
+}
+
+h2 {
+    color: green;
+}
+
+.first {
+    color: blue;
+}

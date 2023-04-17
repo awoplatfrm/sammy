@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="wrapper">
+    <p><h2>DAILY QUOTE</h2></p>
+    <p id="quote"></p>
+<button id="generate" onclick="quoteGenerator()"> Quote Generator</button>
+</div>
+
+<script>
+    function quoteGenerator(){
+    const quotes = [
+    "Give thanks to the Lord, for He is good; his love endures forever.-psalm 107:1",
+    "In the world you will have tribulation But take heart I have overcome the world.",
+    "When I am afraid, I put my trust in you. - Psalms 56:3 Read more",
+    "A faithful man shall abound with blessings. - Proverbs 28:20",
+    "If God is for us, who can be against us? - Romans 8:31",
+    "For we live by faith, not by sight. - 2 Corinthians 5:7"
+    ]
+    quoterandom = Math.floor(Math.random() * quotes.length)
+    document.getElementById("quote").innerHTML = quotes[quoterandom]
+    }
+
+</script>
+</body> 
+</html>
