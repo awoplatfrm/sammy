@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <figure>
+                <img src="" alt="logo">
+            </figure>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Service</a></li>
+            </ul>
+            <div id="controls">
+                <h3>login</h3>
+            </div>
+        </nav>
+        <div id="content">
+            <!-- <div id="tittle">
+                <h2>tittle</h2>
+            </div>
+            <div id="img">
+                <img src="" alt="image">
+            </div>
+            <div id="price-add2cart">
+                <div class="price">Price</div>
+                <div> <button type="button" class="price">Add to cart</button></div>
+            </div>
+            <div class="description"><h4>description</h4></div> -->
+        </div>
+    </div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET","https://api.escuelajs.co/api/v1/products");
+        xhr.onload = function(){
+            let dataset = JSON.parse(xhr.responseText)
+            let cont = document.getElementById('content')
+            let container = document.createElement('div')
+            container.innerHTML = `<h3>PRODUCT</h3>`
+          for(let i=0; i<dataset.length; i++){
+            console.log(dataset[i])
+            container.innerHTML +=`<div class"image"><img src='${dataset[i]['images']}'></div>`
+            container.innerHTML += `<h3>${dataset[i]['title']}</h3>`
+            container.innerHTML += `<div><h4>${dataset[i]['price']}</h4></div>`
+            container.innerHTML += `<div><button type='button'>add to cart</button></div>`
+            
+          }
+           cont.appendChild(container)
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
